@@ -54,6 +54,29 @@ const FileScanner = () => {
     }
   };
 
+  // Custom color logic for security and risk levels
+  const getSecurityLevelColor = (securityLevel: string, riskLevel: string) => {
+    if (securityLevel === "LOW" && riskLevel === "LOW") return "text-red-400";
+    if (securityLevel === "HIGH" && riskLevel === "HIGH") return "text-blue-400";
+    switch (securityLevel) {
+      case "HIGH": return "text-green-400";
+      case "MEDIUM": return "text-yellow-400";
+      case "LOW": return "text-red-400";
+      default: return "text-gray-400";
+    }
+  };
+
+  const getRiskLevelColor = (securityLevel: string, riskLevel: string) => {
+    if (securityLevel === "LOW" && riskLevel === "LOW") return "text-blue-400";
+    if (securityLevel === "HIGH" && riskLevel === "HIGH") return "text-red-400";
+    switch (riskLevel) {
+      case "HIGH": return "text-red-400";
+      case "MEDIUM": return "text-yellow-400";
+      case "LOW": return "text-green-400";
+      default: return "text-gray-400";
+    }
+  };
+
   const getRiskColor = (level: string) => {
     switch (level) {
       case "HIGH": return "text-red-400";
@@ -210,7 +233,7 @@ const FileScanner = () => {
                 <div className="bg-gray-700 p-4 rounded border border-green-600">
                   <div className="flex items-center justify-between">
                     <span className="font-mono text-green-300">Security Level</span>
-                    <span className={`font-mono font-bold ${getRiskColor(scanResult.securityLevel)}`}>
+                    <span className={`font-mono font-bold ${getSecurityLevelColor(scanResult.securityLevel, scanResult.riskLevel)}`}>
                       {scanResult.securityLevel}
                     </span>
                   </div>
@@ -218,7 +241,7 @@ const FileScanner = () => {
                 <div className="bg-gray-700 p-4 rounded border border-green-600">
                   <div className="flex items-center justify-between">
                     <span className="font-mono text-green-300">Risk Level</span>
-                    <span className={`font-mono font-bold ${getRiskColor(scanResult.riskLevel)}`}>
+                    <span className={`font-mono font-bold ${getRiskLevelColor(scanResult.securityLevel, scanResult.riskLevel)}`}>
                       {scanResult.riskLevel}
                     </span>
                   </div>
