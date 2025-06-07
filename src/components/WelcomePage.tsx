@@ -28,8 +28,7 @@ const WelcomePage = ({ onEnter }: WelcomePageProps) => {
   }, []);
 
   useEffect(() => {
-    // Droplets background effect
-    const dropletCount = 40;
+    // Droplets background effect (continuous)
     const container = document.createElement("div");
     container.style.position = "fixed";
     container.style.top = "0";
@@ -39,18 +38,29 @@ const WelcomePage = ({ onEnter }: WelcomePageProps) => {
     container.style.pointerEvents = "none";
     container.style.zIndex = "1";
     container.className = "droplets-bg";
+    document.body.appendChild(container);
 
-    for (let i = 0; i < dropletCount; i++) {
+    const createDroplet = () => {
       const droplet = document.createElement("span");
       droplet.className = "droplet";
       droplet.textContent = Math.random() > 0.5 ? "0" : "1";
       droplet.style.left = Math.random() * 100 + "vw";
-      droplet.style.animationDelay = (Math.random() * 3) + "s";
+      droplet.style.animationDelay = "0s";
       droplet.style.fontSize = (14 + Math.random() * 10) + "px";
+      // Remove droplet after animation ends
+      droplet.addEventListener("animationend", () => {
+        if (droplet.parentNode) droplet.parentNode.removeChild(droplet);
+      });
       container.appendChild(droplet);
-    }
-    document.body.appendChild(container);
+    };
+
+    // Create droplets at a regular interval for continuous effect
+    const interval = setInterval(() => {
+      createDroplet();
+    }, 80); // Adjust interval for density
+
     return () => {
+      clearInterval(interval);
       if (container.parentNode) container.parentNode.removeChild(container);
     };
   }, []);

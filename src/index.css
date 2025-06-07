@@ -132,7 +132,7 @@
 }
 
 .matrix-rain {
-  position: relative;
+  position: absolute;
   height: 100vh;
   overflow: hidden;
 }
@@ -209,7 +209,7 @@
   font-family: 'Courier New', monospace;
   font-size: 18px;
   opacity: 1;
-  animation: droplet-fall 10ms linear infinite;
+  animation: droplet-fall 2s linear infinite;
   pointer-events: none;
   user-select: none;
 }
