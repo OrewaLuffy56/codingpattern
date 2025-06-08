@@ -1,14 +1,24 @@
 User-agent: Googlebot
+Disallow: /admin
+Disallow: /private
 Allow: /
 
 User-agent: Bingbot
+Disallow: /admin
+Disallow: /private
 Allow: /
 
 User-agent: Twitterbot
+Disallow: /admin
+Disallow: /private
 Allow: /
 
 User-agent: facebookexternalhit
+Disallow: /admin
+Disallow: /private
 Allow: /
 
 User-agent: *
+Disallow: /admin
+Disallow: /private
 Allow: /

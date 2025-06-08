@@ -130,6 +130,10 @@ const WelcomePage = ({ onEnter }: WelcomePageProps) => {
         <p className="mt-8 text-red-400 font-mono text-sm animate-pulse">
           [AUTHORIZED PERSONNEL ONLY]
         </p>
+        {/* Watermark */}
+        <div className="fixed bottom-4 left-1/2 transform -translate-x-1/2 z-50 opacity-80 pointer-events-none font-mono text-green-400 text-base select-none">
+          <span className="typing-watermark">[Developed by YASHWANTH CHANDRA ARADHYA]</span>
+        </div>
       </div>
     </div>
   );
