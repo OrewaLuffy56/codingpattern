@@ -41,4 +41,4 @@ MIT
 ---
 
 > Built for modern code security analysis and reporting.
----Create by Yashwanth Chandra Aradhya & Chinmay V
+---Created by Yashwanth Chandra Aradhya & Chinmay V

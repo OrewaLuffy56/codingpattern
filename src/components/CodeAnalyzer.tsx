@@ -14,6 +14,7 @@ const CodeAnalyzer = () => {
   const [analysisProgress, setAnalysisProgress] = useState(0);
   const [analysisResult, setAnalysisResult] = useState<EnhancedCodeAnalysisResult | null>(null);
   const [detectedLanguage, setDetectedLanguage] = useState("");
+  const [analysisError, setAnalysisError] = useState<string | null>(null);
 
   const startAnalysis = async () => {
     if (!code.trim()) return;
@@ -21,6 +22,7 @@ const CodeAnalyzer = () => {
     setIsAnalyzing(true);
     setAnalysisProgress(0);
     setAnalysisResult(null);
+    setAnalysisError(null);
 
     // Enhanced analysis process with ML
     const totalSteps = 100;
@@ -47,6 +49,7 @@ const CodeAnalyzer = () => {
     } catch (error) {
       console.error('Enhanced code analysis failed:', error);
       setIsAnalyzing(false);
+      setAnalysisError('An error occurred during analysis. Please check your code and try again.');
     }
   };
 
@@ -318,11 +321,17 @@ const CodeAnalyzer = () => {
         </Card>
       )}
 
-      {/* Error Message */}
+      {/* Error Message or Placeholder */}
       { !isAnalyzing && !analysisResult && (
-        <div className="text-red-400 text-sm font-mono text-center">
-          An error occurred during analysis. Please check your code and try again.
-        </div>
+        analysisError ? (
+          <div className="text-red-400 text-sm font-mono text-center">
+            {analysisError}
+          </div>
+        ) : (
+          <div className="text-blue-400 text-sm font-mono text-center opacity-80">
+            Your analysis will be shown here.
+          </div>
+        )
       )}
 
       {/* Enhanced Analysis Results */}
