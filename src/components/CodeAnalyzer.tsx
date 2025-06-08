@@ -591,7 +591,7 @@ const CodeAnalyzer = () => {
           </Card>
           {/* Export PDF Button */}
           <Button className="mt-2 bg-blue-600 text-white hover:bg-blue-500 font-mono" onClick={handleExportPDF}>
-            Export PDF Report
+            DOWNLOAD PDF Report
           </Button>
         </div>
       )}
