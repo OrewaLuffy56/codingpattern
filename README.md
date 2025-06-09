@@ -1,44 +1,106 @@
-# INSECURE CODING PATTERN ANALYSER
+# **CODINGPATTERN**  
+**Empower Your Code, Secure Your Future**  
 
-A modern, visually branded tool for analyzing source code and files for insecure coding patterns, vulnerabilities, and code quality issues. Export professional PDF reports with your logo, watermark, and consistent dark-themed styling.
+> 🚀 Built with the best tech and technologies.
 
-## Features
-- **Advanced Code & File Scanning:** Detects insecure patterns, vulnerabilities, and risky code in multiple languages.
-- **Branded PDF Export:** Generate visually appealing PDF reports with your logo, watermark, and modern layout.
-- **Security & Risk Metrics:** Provides detailed metrics, security scores, and risk levels for each scan.
-- **Actionable Recommendations:** Offers prioritized suggestions to improve code security and quality.
-- **Consistent UI/UX:** Modern, dark-themed interface with clear, color-coded results and branding.
-
-## How It Works
-1. **Scan Code or Files:** Use the dashboard to analyze your codebase or upload files for scanning.
-2. **Review Results:** View detailed metrics, vulnerabilities, and recommendations in the app.
-3. **Export Reports:** Download branded PDF reports for sharing or compliance.
-
-## Technologies Used
-- React (TypeScript)
-- jsPDF (PDF generation)
-- Custom SVG branding and watermarking
-- Static and ML-based code analysis
-
-## Getting Started
-1. Install dependencies:
-   ```sh
-   npm install
-   ```
-2. Start the development server:
-   ```sh
-   npm run dev
-   ```
-3. Open your browser to `http://localhost:5173` (or as indicated in the terminal).
-
-## Customization
-- **Branding:** Update `src/components/downloadsvg.svg` for your logo/watermark.
-- **PDF Styling:** Adjust PDF export logic in `CodeAnalyzer.tsx` and `FileScanner.tsx` for custom layouts/colors.
-
-## License
-MIT
+[![TypeScript](https://img.shields.io/badge/TypeScript-blue)]()
+[![React](https://img.shields.io/badge/React-61DAFB?logo=react)]()
+[![Node.js](https://img.shields.io/badge/Node.js-339933?logo=node.js)]()
+[![Vite](https://img.shields.io/badge/Vite-646CFF?logo=vite)]()
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?logo=tailwind-css)]()
+[![PDFMake](https://img.shields.io/badge/PDFMake-red?logo=pdfmake)]()
 
 ---
 
-> Built for modern code security analysis and reporting.
----Created by Yashwanth Chandra Aradhya & Chinmay V
+## Table of Contents
+
+- [Overview](#overview)  
+- [Getting Started](#getting-started)  
+  - [Prerequisites](#prerequisites)  
+  - [Installation](#installation)  
+- [Usage](#usage)  
+- [Testing](#testing)  
+- [About Me](#about-me)
+
+---
+
+## 📌 Overview
+
+Introducing **codingpattern**, a powerful tool designed to enhance code security and quality through comprehensive analysis and actionable insights.
+
+### Why codingpattern?
+
+This project aims to identify insecure coding practices and vulnerabilities across various programming languages. Core features include:
+
+- ✅ **Comprehensive Security Analysis**: Identifies vulnerabilities and insecure coding practices, ensuring robust code quality.
+- 🎨 **User-Friendly Interface**: A modern design that simplifies navigation and enhances user experience.
+- 📄 **PDF Reporting**: Generates visually branded reports for compliance and easy sharing with stakeholders.
+- ⚙️ **Integration with Modern Tech Stacks**: Seamlessly works with TypeScript, React, and Vite, fitting into contemporary development workflows.
+- 🔁 **Real-Time Feedback**: Provides actionable recommendations to improve code quality on the fly.
+- 🌐 **Responsive Design**: Adapts to various devices, ensuring accessibility and usability across platforms.
+
+---
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+This project requires the following dependencies:
+
+- **Programming Language**: TypeScript  
+- **Package Manager**: Npm  
+
+---
+
+## 📥 Installation
+
+Build codingpattern from the source and install dependencies:
+
+1. **Clone the repository:**
+```bash
+git clone https://github.com/OrewaLuffy56/codingpattern
+```
+
+2. **Navigate to the project directory:**
+```bash
+cd codingpattern
+```
+
+3. **Install the dependencies:**
+```bash
+npm install
+```
+
+---
+
+## ▶️ Usage
+
+Run the project with:
+```bash
+npm start
+```
+
+---
+
+## 🧪 Testing
+
+Codingpattern uses the [Jest framework]. Run the test suite with:
+
+```bash
+npm test
+```
+
+---
+
+## 👤 About Me
+
+**Yashwanth Chandra Aradhya**  
+B.Tech student at Maharaja Institute of Technology Mysuru  
+Aspiring to become a well-known cyber securitist. Passionate about cybersecurity, technology, and building tools that make code safer for everyone.
+
+
+-----created by Yashwanth Chandra Aradhya & Chinmay V
+
+---
+
+[🔙 Return](#table-of-contents)
